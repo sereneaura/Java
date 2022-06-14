@@ -3,7 +3,7 @@ package Chapter6.Chapter7;
 import java.util.ArrayList;
 
 public class Student {
-    private ArrayList<Course> courseOffered = new ArrayList<>();
+    private ArrayList<Chapter6.Chapter7.Course> courseOffered = new ArrayList<>();
     private String firstName;
     private String lastName;
     private int age;
@@ -18,7 +18,7 @@ public class Student {
         this.gender = gender;
         studentId = ++Id;
     }
-    public void offerCourse(Course course){
+    public void offerCourse(Chapter6.Chapter7.Course course){
         courseOffered.add(course);
     }
 
@@ -69,8 +69,8 @@ public class Student {
         gender = actualGender;
     }
 
-    public Course getACourseOffered(String courseName) {
-        for(Course course: courseOffered){
+    public Chapter6.Chapter7.Course getACourseOffered(String courseName) {
+        for(Chapter6.Chapter7.Course course: courseOffered){
             if(course.getCourseName().equalsIgnoreCase(courseName)){
                 return course;
             }
@@ -80,7 +80,7 @@ public class Student {
     }
 
     public void getAllCoursesOffered() {
-        for(Course course: courseOffered){
+        for(Chapter6.Chapter7.Course course: courseOffered){
             System.out.println(course);
         }
     }

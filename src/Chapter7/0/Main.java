@@ -4,10 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    static School school;
+    static Chapter6.Chapter7.School school;
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        school = new School("Semicolon", "Sabo");
+        school = new Chapter6.Chapter7.School("Semicolon", "Sabo");
         System.out.println("Welcome to Semicolon");
         try{
             addCourse();
@@ -148,7 +148,7 @@ public class Main {
             System.out.println("enter gender: ");
             String gender = scanner.next();
 
-            Student student = new Student(firstName,lastName,age,gender);
+            Chapter6.Chapter7.Student student = new Chapter6.Chapter7.Student(firstName,lastName,age,gender);
             school.addStudent(student);
             int exit = 0;
             while(exit != -1){
@@ -156,7 +156,7 @@ public class Main {
                 school.getAllCourses();
                 System.out.println("enter course id to offer course");
                 int courseId = scanner.nextInt();
-                Course course = school.getCourse(courseId);
+                Chapter6.Chapter7.Course course = school.getCourse(courseId);
                 student.offerCourse(course);
 
                 System.out.println("enter 1 to offer another course?");
@@ -181,7 +181,7 @@ public class Main {
         while (sentinel!= -1){
             System.out.println("enter course name: ");
             String courseName = scanner.next();
-            Course course = new Course(courseName);
+            Chapter6.Chapter7.Course course = new Chapter6.Chapter7.Course(courseName);
             school.addCourse(course);
             System.out.println("press 1 to add another course or 0 to end");
             int user_input = scanner.nextInt();

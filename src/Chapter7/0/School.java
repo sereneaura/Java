@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class School {
     private String name;
     private String location;
-    private ArrayList<Course> listOfCourses = new ArrayList<>();
-    private  ArrayList<Student> listOfStudents = new ArrayList<>();
-    private ArrayList<Student> expelledStudents = new ArrayList<>();
+    private ArrayList<Chapter6.Chapter7.Course> listOfCourses = new ArrayList<>();
+    private  ArrayList<Chapter6.Chapter7.Student> listOfStudents = new ArrayList<>();
+    private ArrayList<Chapter6.Chapter7.Student> expelledStudents = new ArrayList<>();
 
     public School(String name, String location){
         this.name = name;
@@ -22,12 +22,12 @@ public class School {
         return location;
     }
 
-    public void addCourse(Course course) {
+    public void addCourse(Chapter6.Chapter7.Course course) {
         listOfCourses.add(course);
     }
 
-    public Course getCourse(int courseId) {
-        for(Course course: listOfCourses){
+    public Chapter6.Chapter7.Course getCourse(int courseId) {
+        for(Chapter6.Chapter7.Course course: listOfCourses){
             if (course.getCourseId() == courseId){
                 return course;
             }
@@ -36,14 +36,14 @@ public class School {
     }
 
     public void getAllCourses() {
-        for (Course course: listOfCourses){
+        for (Chapter6.Chapter7.Course course: listOfCourses){
             System.out.println(course);
         }
     }
 
     public void removeCourse(String courseName) {
-        Course courseToBeRemoved = null;
-        for(Course course: listOfCourses){
+        Chapter6.Chapter7.Course courseToBeRemoved = null;
+        for(Chapter6.Chapter7.Course course: listOfCourses){
             if(course.getCourseName().equalsIgnoreCase(courseName)){
                 courseToBeRemoved = course;
                 break;
@@ -56,12 +56,12 @@ public class School {
 
     }
 
-    public void addStudent(Student student ){
+    public void addStudent(Chapter6.Chapter7.Student student ){
         listOfStudents.add(student);
     }
 
-    public Student getStudent(int studentId) {
-        for(Student student: listOfStudents){
+    public Chapter6.Chapter7.Student getStudent(int studentId) {
+        for(Chapter6.Chapter7.Student student: listOfStudents){
             if(student.getStudentId() == studentId){
                 return student;
             }
@@ -72,14 +72,14 @@ public class School {
 
 
     public void getAllStudents() {
-       for (Student student: listOfStudents){
+       for (Chapter6.Chapter7.Student student: listOfStudents){
            System.out.println(student);
        }
     }
 
     public void expelStudent(int studentId) {
-        Student studentToBeExpelled = null;
-        for(Student student: listOfStudents){
+        Chapter6.Chapter7.Student studentToBeExpelled = null;
+        for(Chapter6.Chapter7.Student student: listOfStudents){
             if(student.getStudentId() == studentId){
                 studentToBeExpelled = student;
                 break;
@@ -94,7 +94,7 @@ public class School {
     }
 
     public void editInfo(String name,String oldName, String newName) {
-        for(Student student : listOfStudents){
+        for(Chapter6.Chapter7.Student student : listOfStudents){
             if(student.getFirstName().equalsIgnoreCase(oldName)){
                 if(name.equalsIgnoreCase("F")){
                     student.setFirstName(newName);
@@ -114,7 +114,7 @@ public class School {
 
     }
     public void editInfo(int studentId, int actualAge){
-        for(Student student: listOfStudents){
+        for(Chapter6.Chapter7.Student student: listOfStudents){
             if(student.getStudentId() == studentId){
                 student.setAge(actualAge);
                 return;
@@ -124,7 +124,7 @@ public class School {
 
     }
     public void editInfo(int studentId, String actualGender){
-        for(Student student: listOfStudents){
+        for(Chapter6.Chapter7.Student student: listOfStudents){
             if(student.getStudentId() == studentId){
                 student.setGender(actualGender);
                 return;
@@ -135,13 +135,13 @@ public class School {
     }
 
     public void getAllExpelledStudents() {
-        for (Student student: expelledStudents){
+        for (Chapter6.Chapter7.Student student: expelledStudents){
             System.out.println(student);
         }
     }
 
     public void editCourseName(int id, String newName) {
-        for (Course course: listOfCourses){
+        for (Chapter6.Chapter7.Course course: listOfCourses){
             if(course.getCourseId() == id){
                 course.setName(newName);
                 break;
